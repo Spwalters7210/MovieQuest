@@ -1,0 +1,8 @@
+// Each investigation happens in a different location.
+export const ENCOUNTERS = [
+ {id:'casefile',room:'office',x:370,y:270,name:'Missing Persons File',prompt:'A case file has conflicting witness statements. How do you proceed?',choices:[{text:'Compare the timelines for inconsistencies',effects:{mystery:2,suspense:1}},{text:'Interview the witnesses immediately',effects:{action:1,mystery:1}}]},
+ {id:'witness',room:'station',x:253,y:237,name:'Nervous Witness',prompt:'A witness avoids eye contact and changes their story. What do you do?',choices:[{text:'Ask careful follow-up questions',effects:{mystery:2,suspense:1}},{text:'Ease the tension with a joke',effects:{humor:2,suspense:-1}}]},
+ {id:'footprints',room:'alley',x:265,y:240,name:'Muddy Footprints',prompt:'Fresh footprints lead toward the abandoned manor. Your next move?',choices:[{text:'Follow them quietly',effects:{suspense:2,mystery:1}},{text:'Run ahead before the trail goes cold',effects:{action:2,suspense:1}}]},
+ {id:'journal',room:'manor',x:330,y:451,name:'Hidden Journal',prompt:'You find a locked journal beneath a loose floorboard.',choices:[{text:'Study the cipher and decode the entries',effects:{mystery:2}},{text:'Search the room for its owner',effects:{action:1,suspense:2}}]},
+ {id:'finale',room:'manor',x:932,y:177,name:'The Final Confrontation',requires:['casefile','witness','footprints','journal'],prompt:'The suspect appears. How will you resolve the mystery?',choices:[{text:'Reveal the evidence and let the truth speak',effects:{mystery:2,suspense:1}},{text:'Confront the suspect with a bold accusation',effects:{action:2,suspense:1}}]},
+];
